@@ -20,6 +20,7 @@
       <br />
       <button v-if='!started' @click='startGame'>Start!</button>
       <button v-else @click='finishGame'>Finish!</button>
+      <p v-if='started'>Click on screen to change scale</p>
       <ScaleTrainerGame v-if='started' :scales=selectedScales />
     </span>
     <span v-else>Select some scales above!</span>
