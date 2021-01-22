@@ -33,7 +33,7 @@ export default {
 
 <style scoped>
   .game-max-mode {
-    font-size: 45vw;
+    font-size: 35vw;
   }
   p {
     margin: 0;
