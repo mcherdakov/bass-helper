@@ -79,6 +79,6 @@ export default {
 <style scoped>
   .scales-list {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 </style>
