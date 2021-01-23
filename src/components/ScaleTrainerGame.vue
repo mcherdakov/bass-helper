@@ -1,11 +1,19 @@
 <template>
+  <label><input type='checkbox' v-model='showNotes'/>Show notes</label>
   <div class='game-max-mode'>
-    <p v-if='scales.length' @click='onClick'>{{ scales[currentIndex].name }}</p>
+    <p v-if='scales.length' @click='onClick'>{{ shuffledScales[currentIndex].name }}</p>
   </div>
+  <p v-if='showNotes' class='notes'>
+    <span v-for='note in shuffledScales[currentIndex].notes' :key='note'> 
+      <strong v-if='note === startFrom'>{{ note + ' ' }}</strong>
+      <span v-else>{{ note + ' ' }}</span>
+    </span>
+  </p>
 </template>
 
 <script>
 import { ref } from 'vue'
+import { shuffle, getRandomElem } from '../utils/random'
 
 export default {
   props: {
@@ -14,17 +22,21 @@ export default {
     }
   },
   setup(props) {
-    const getRandomIndex = () => {
-      return Math.floor(Math.random() * props.scales.length)
-    }
-    const currentIndex = ref(getRandomIndex());
+    const shuffledScales = ref(shuffle(props.scales))
+    const currentIndex = ref(0);
+    const showNotes = ref(true);
+    const startFrom = ref(getRandomElem(shuffledScales.value[currentIndex.value].notes));
 
     const onClick = () => {
-      currentIndex.value = getRandomIndex()
+      currentIndex.value = (currentIndex.value + 1) % props.scales.length;
+      startFrom.value = getRandomElem(shuffledScales.value[currentIndex.value].notes);
     }
   
     return {
+      shuffledScales,
       currentIndex,
+      startFrom,
+      showNotes,
       onClick,
     }
   }
@@ -33,7 +45,10 @@ export default {
 
 <style scoped>
   .game-max-mode {
-    font-size: 35vw;
+    font-size: 30vw;
+  }
+  .notes {
+    font-size: 5vw;
   }
   p {
     margin: 0;

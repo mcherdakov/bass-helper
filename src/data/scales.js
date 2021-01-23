@@ -9,150 +9,94 @@ const scales = [
   },
   {
     id: 2,
-    name: 'Cm',
+    name: 'G',
     notes: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 
+      'G', 'A', 'B', 'C', 'D', 'E', 'F#', 
     ],
     checked: false,
   },
   {
     id: 3,
-    name: 'C#',
+    name: 'D',
     notes: [
-      'C', 'D', 'E', 'F', 'G', 'A', 'B'
+      'D', 'E', 'F#', 'G', 'A', 'B', 'C#'
     ],
     checked: false,
   },
   {
     id: 4,
-    name: 'C#m',
+    name: 'A',
     notes: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 
+      'A', 'B', 'C#', 'D', 'E', 'F#', 'G#', 
     ],
     checked: false,
   },
   {
     id: 5,
-    name: 'D',
+    name: 'E',
     notes: [
-      'C', 'D', 'E', 'F', 'G', 'A', 'B'
+      'E', 'F#', 'G#', 'A', 'B', 'C#', 'D#',
     ],
     checked: false,
   },
   {
     id: 6,
-    name: 'Dm',
+    name: 'B',
     notes: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 
+      'B', 'C#', 'D#', 'E', 'F#', 'G#', 'A#',
     ],
     checked: false,
   },
   {
     id: 7,
-    name: 'D#',
+    name: 'F#',
     notes: [
-      'C', 'D', 'E', 'F', 'G', 'A', 'B'
+      'F#', 'G#', 'A#', 'B', 'C#', 'D#', 'E#',
     ],
     checked: false,
   },
   {
     id: 8,
-    name: 'D#m',
+    name: 'Db',
     notes: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 
+      'Db', 'Eb', 'F', 'Gb', 'Ab', 'Bb', 'C', 
     ],
     checked: false,
   },
   {
     id: 9,
-    name: 'E',
+    name: 'Ab',
     notes: [
-      'C', 'D', 'E', 'F', 'G', 'A', 'B'
+      'Ab', 'Bb', 'C', 'Db', 'Eb', 'F', 'G'
     ],
     checked: false,
   },
   {
     id: 10,
-    name: 'Em',
+    name: 'Eb',
     notes: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 
+      'Eb', 'F', 'G', 'Ab', 'Bb', 'C', 'D', 
     ],
     checked: false,
   },
   {
     id: 11,
-    name: 'F',
+    name: 'Bb',
     notes: [
-      'C', 'D', 'E', 'F', 'G', 'A', 'B'
+      'Bb', 'C', 'D', 'Eb', 'F', 'G', 'A',
     ],
     checked: false,
   },
   {
     id: 12,
-    name: 'Fm',
+    name: 'F',
     notes: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 
+      'F', 'G', 'A', 'Bb', 'C', 'D', 'E',
     ],
     checked: false,
   },
   {
     id: 13,
-    name: 'F#',
-    notes: [
-      'C', 'D', 'E', 'F', 'G', 'A', 'B'
-    ],
-    checked: false,
-  },
-  {
-    id: 14,
-    name: 'F#m',
-    notes: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 
-    ],
-    checked: false,
-  },
-  {
-    id: 15,
-    name: 'G',
-    notes: [
-      'C', 'D', 'E', 'F', 'G', 'A', 'B'
-    ],
-    checked: false,
-  },
-  {
-    id: 16,
-    name: 'Gm',
-    notes: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 
-    ],
-    checked: false,
-  },
-  {
-    id: 17,
-    name: 'G#',
-    notes: [
-      'C', 'D', 'E', 'F', 'G', 'A', 'B'
-    ],
-    checked: false,
-  },
-  {
-    id: 18,
-    name: 'G#m',
-    notes: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 
-    ],
-    checked: false,
-  },
-  {
-    id: 19,
-    name: 'A',
-    notes: [
-      'C', 'D', 'E', 'F', 'G', 'A', 'B'
-    ],
-    checked: false,
-  },
-  {
-    id: 20,
     name: 'Am',
     notes: [
       'A', 'B', 'C', 'D', 'E', 'F', 'G', 
@@ -160,34 +104,90 @@ const scales = [
     checked: false,
   },
   {
-    id: 21,
-    name: 'A#',
+    id: 14,
+    name: 'Em',
     notes: [
-      'C', 'D', 'E', 'F', 'G', 'A', 'B'
+      'E', 'F#', 'G', 'A', 'B', 'C', 'D', 
+    ],
+    checked: false,
+  },
+  {
+    id: 15,
+    name: 'Bm',
+    notes: [
+      'B', 'C#', 'D', 'E', 'F#', 'G', 'A',
+    ],
+    checked: false,
+  },
+  {
+    id: 16,
+    name: 'F#m',
+    notes: [
+      'F#', 'G#', 'A', 'B', 'C#', 'D', 'E', 
+    ],
+    checked: false,
+  },
+  {
+    id: 17,
+    name: 'C#m',
+    notes: [
+      'C#', 'D#', 'E', 'F#', 'G#', 'A', 'B'
+    ],
+    checked: false,
+  },
+  {
+    id: 18,
+    name: 'G#m',
+    notes: [
+      'G#', 'A#', 'B', 'C#', 'D#', 'E', 'F#',
+    ],
+    checked: false,
+  },
+  {
+    id: 19,
+    name: 'Ebm',
+    notes: [
+      'Eb', 'F', 'Gb', 'Ab', 'Bb', 'Cb', 'Db',
+    ],
+    checked: false,
+  },
+  {
+    id: 20,
+    name: 'Bbm',
+    notes: [
+      'Bb', 'C', 'Db', 'Eb', 'F', 'Gb', 'Ab',
+    ],
+    checked: false,
+  },
+  {
+    id: 21,
+    name: 'Fm',
+    notes: [
+      'F', 'G', 'Ab', 'Bb', 'C', 'Db', 'Eb',
     ],
     checked: false,
   },
   {
     id: 22,
-    name: 'A#m',
+    name: 'Cm',
     notes: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 
+      'C', 'D', 'Eb', 'F', 'G', 'Ab', 'Bb',
     ],
     checked: false,
   },
   {
     id: 23,
-    name: 'B',
+    name: 'Gm',
     notes: [
-      'C', 'D', 'E', 'F', 'G', 'A', 'B'
+      'G', 'A', 'Bb', 'C', 'D', 'Eb', 'F',
     ],
     checked: false,
   },
   {
     id: 24,
-    name: 'Bm',
+    name: 'Dm',
     notes: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 
+      'D', 'E', 'F', 'G', 'A', 'Bb', 'C', 
     ],
     checked: false,
   },
