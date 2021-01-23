@@ -28,7 +28,11 @@ export default {
     const startFrom = ref(getRandomElem(shuffledScales.value[currentIndex.value].notes));
 
     const onClick = () => {
-      currentIndex.value = (currentIndex.value + 1) % props.scales.length;
+      currentIndex.value = currentIndex.value + 1;
+      if (currentIndex.value == shuffledScales.value.length) {
+        shuffledScales.value = shuffle(props.scales);
+        currentIndex.value = 0;
+      }
       startFrom.value = getRandomElem(shuffledScales.value[currentIndex.value].notes);
     }
   
