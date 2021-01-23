@@ -5,7 +5,7 @@
   </div>
   <p v-if='showNotes' class='notes'>
     <span v-for='note in shuffledScales[currentIndex].notes' :key='note'> 
-      <strong v-if='note === startFrom'>{{ note + ' ' }}</strong>
+      <strong class='start-note' v-if='note === startFrom'>{{ note + ' ' }}</strong>
       <span v-else>{{ note + ' ' }}</span>
     </span>
   </p>
@@ -49,6 +49,9 @@ export default {
   }
   .notes {
     font-size: 5vmin;
+  }
+  .start-note {
+    color: rgb(170, 170, 26);
   }
   p {
     margin: 0;
