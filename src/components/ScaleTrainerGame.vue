@@ -45,10 +45,10 @@ export default {
 
 <style scoped>
   .game-max-mode {
-    font-size: 30vw;
+    font-size: 45vmin;
   }
   .notes {
-    font-size: 5vw;
+    font-size: 5vmin;
   }
   p {
     margin: 0;
